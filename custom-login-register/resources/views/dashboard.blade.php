@@ -21,7 +21,7 @@
                 <div class="card">
                     <div class="card-header">
                         <h3 class="float-start">Wellcome to Dashboard</h3>
-                        <a href="#"  class="float-end btn btn-primary">Logout</a>
+                        <a href="logout" class="float-end btn btn-primary">Logout</a>
                     </div>
                     <div class="card-body">
                        <table class="table tble-striped table-bordered">
@@ -34,8 +34,8 @@
                            </thead>
                            <tbody>
                                <tr>
-                                   <td>Sofik</td>
-                                   <td>01768987779</td>
+                                   <td>{{$data->roll}}</td>
+                                   <td>{{$data->phone}}</td>
                                    <td>
                                        <a href="#" class="btn btn-primary">view</a>
                                    </td>
