@@ -24,23 +24,29 @@
                     </div>
                     <div class="card-body">
                         <form action="{{route('register-user')}}" method="POST">
+                            @if(Session::has('success'))
+                            <div class="alert alert-success">{{Session::get('success')}}</div>
+                            @endif
+                            @if(Session::has('fail'))
+                            <div class="alert alert-danger">{{Session::get('fail')}}</div>
+                            @endif
                             @csrf
                             <div class="mb-3 mt-3">
                                 <label for="roll" class="form-label">Roll:</label>
-                                <input type="text" class="form-control" id="roll" value="{{old('roll')}}" placeholder="Enter roll"
+                                <input type="number" class="form-control" id="roll" value="{{old('roll')}}" placeholder="Enter roll"
                                     name="roll">
                                     <span class="text-danger">@error('roll') {{$message}} @enderror</span>
                             </div>
                             <div class="mb-3 mt-3">
                                 <label for="phone" class="form-label">Phone:</label>
-                                <input type="text" value="{{old('phone')}}" class="form-control" id="roll" placeholder="Enter phone"
+                                <input type="number" value="{{old('phone')}}" class="form-control" id="roll" placeholder="Enter phone"
                                     name="phone">
                                     <span class="text-danger">@error('phone') {{$message}} @enderror</span>
                             </div>
                             <div class="mb-3">
                                 <label for="pwd" class="form-label">Password:</label>
                                 <input type="password" class="form-control" id="pwd" placeholder="Enter password"
-                                    name="pswd">
+                                    name="password">
                                     <span class="text-danger">@error('password') {{$message}} @enderror</span>
                             </div>
                             
