@@ -20,7 +20,7 @@
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-header">
-                        <h3>Registration</h3>
+                        <h3>Login Here</h3>
                     </div>
                     <div class="card-body">
                         <form action="/action_page.php">
@@ -37,6 +37,9 @@
                             </div>
                             
                             <button name="login" type="submit" class="btn btn-primary">Login</button>
+                            <br>
+                            <br>
+                            <a href="/registration">New user registraion Here !!</a>
                         </form>
                     </div>
                     <div class="card-footer">
