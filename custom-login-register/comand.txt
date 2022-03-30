@@ -2,4 +2,6 @@ composer create-project --prefer-dist laravel/laravel custom-login-register
 php artisan make:controller CustomAuthController
 php artisan make:model User -m 
 php artisan migrate
+php artisan make:middleware Authcheck
+php artisan make:middleware AlreadyLogedin
 
