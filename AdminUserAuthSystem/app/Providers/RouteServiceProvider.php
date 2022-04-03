@@ -18,11 +18,13 @@ class RouteServiceProvider extends ServiceProvider
      * @var string
      */
     public const HOME = '/dashboard';
+    public const ADMIN_HOME = '/admin/dashboard';
 
     /**
      * Define your route model bindings, pattern filters, etc.
-     *
-     * @return void
+     */
+     protected $namespace = 'App\\Http\\Controllers';
+     /** @return void
      */
     public function boot()
     {
