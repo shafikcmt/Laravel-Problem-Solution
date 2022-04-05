@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.adminmaster')
 @section('content')
     <div id="contentpart">
         <div class="container">
@@ -19,14 +19,14 @@
                             @endif
                             @csrf
                                 <div class="form-floating mb-3 mt-3">
-                                    <input type="text" class="form-control shadow" value="{{old('roll')}}" id="roll" placeholder="Enter roll" name="username">
-                                    <label class="text-uppercase" for="roll">Username</label>
-                                    <span class="text-danger">@error('roll') {{$message}} @enderror</span>
+                                    <input type="text" class="form-control shadow" value="{{old('username')}}" id="username" placeholder="Enter username" name="username">
+                                    <label class="text-uppercase" for="username">Username</label>
+                                    <span class="text-danger">@error('username') {{$message}} @enderror</span>
                                 </div>
                               
                                 <div class="form-floating  mt-3">
                                     <input type="password" class="form-control shadow" id="phone" placeholder="Enter password" name="password">
-                                    <label class="text-uppercase" for="email">Password</label>
+                                    <label class="text-uppercase" for="password">Password</label>
                                     <span class="text-danger">@error('password') {{$message}} @enderror</span>
                                 </div>
                                

@@ -5,7 +5,7 @@
 </head>
 <body>
    <header>
-       @include('includes.header')
+       @include('includes.adminheader')
    </header>
    <div id="main">
            @yield('content')
@@ -15,4 +15,3 @@
    </footer>
 </body>
 </html>
-
