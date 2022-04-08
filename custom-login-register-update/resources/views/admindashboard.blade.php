@@ -44,7 +44,7 @@
     <div class="main-content p-3">
         <div class="row">
             <div class="col-md-3">
-                <a href="students_view" style="text-decoration:none;" class="card card-custom">
+                <a href="/students_view" style="text-decoration:none;" class="card card-custom">
                     <div class="card-body text-center shadow-lg">
                         <h4>All Student</h4>
                         <h3>1245</h3>

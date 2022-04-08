@@ -1,5 +1,5 @@
-@extends('layouts.adminmaster')
-    @section('content')
+<!-- @extends('layouts.adminmaster')
+    @section('content') -->
     <!-- <div class="container">
         
         <!-- <div class="row">
@@ -40,9 +40,9 @@
             </div>
         </div> 
     </div> -->
-    @include('includes.adminsidebar')
+    <!-- @include('includes.adminsidebar') -->
         <div class="main-content p-3">
             <h3>Welcome Students</h3>
         </div>
     </section>
-    @stop
+    <!-- @stop -->

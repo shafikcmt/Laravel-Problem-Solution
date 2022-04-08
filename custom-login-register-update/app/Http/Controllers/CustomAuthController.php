@@ -16,6 +16,9 @@ class CustomAuthController extends Controller
     public function addAdmin(){
         return view('auth.admin.addadmin');
     }
+    public function StudentDetails(){
+        return view('student_details');
+    }
     public function AdminDashboard(){
         $students = '';
         $students = DB::table('users')->get();
@@ -23,12 +26,12 @@ class CustomAuthController extends Controller
      return view('admindashboard',['students'=>$students]);
     }
     public function ViewStudents(){
-        return view('admin.students_view');
+        return view('/students_view');
     }
     public function index(){
         return view('index');
     }
-    public function Login(){
+    public function login(){
         return view("auth.user.login");
     }
     public function registration(){
