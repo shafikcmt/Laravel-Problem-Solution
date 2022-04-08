@@ -9,7 +9,7 @@ use Hash;
 use Session;
 class CustomAuthController extends Controller
 {
-
+   
     public function AdminLogin(){
         return view('auth.admin.admin_login');
     }
@@ -22,10 +22,13 @@ class CustomAuthController extends Controller
         // dd($students);
      return view('admindashboard',['students'=>$students]);
     }
+    public function ViewStudents(){
+        return view('admin.students_view');
+    }
     public function index(){
         return view('index');
     }
-    public function login(){
+    public function Login(){
         return view("auth.user.login");
     }
     public function registration(){

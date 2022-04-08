@@ -7,11 +7,12 @@
    <header>
        @include('includes.adminheader')
    </header>
+   
    <div id="main">
            @yield('content')
    </div>
    <footer>
-       @include('includes.footer')
+       @include('includes.adminfooter')
    </footer>
 </body>
 </html>

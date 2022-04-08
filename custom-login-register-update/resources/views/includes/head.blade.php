@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="{{asset('css/all.min.css')}}">
     <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('css/stylelogin.css')}}">
+    <link rel="stylesheet" href="{{asset('css/admindashboard.css')}}">
     <!--    <link rel="stylesheet" href="css/style.css">-->
     <!-- Load javascript -->
     <script src="{{asset('js/jquery.min.js')}}"></script>

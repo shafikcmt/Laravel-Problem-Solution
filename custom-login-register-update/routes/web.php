@@ -20,8 +20,8 @@ use App\Http\Controllers\CustomAuthController;
 
 // Student Route
 Route::get('/',[CustomAuthController::class,'index']);
-Route::get('login',[CustomAuthController::class,'login'])->middleware('alreadyLogedin');
-Route::get('registration',[CustomAuthController::class,'registration'])->middleware('alreadyLogedin');
+Route::get('/login',[CustomAuthController::class,'Login'])->middleware('alreadyLogedin');
+Route::get('/registration',[CustomAuthController::class,'registration'])->middleware('alreadyLogedin');
 Route::post('/register-user',[CustomAuthController::class,'registerUser'])->name('register-user');
 Route::post('/login-user',[CustomAuthController::class,'loginUser'])->name('login-user');
 Route::get('/dashboard',[CustomAuthController::class,'dashboard'])->middleware('isLoggedIn');
@@ -32,5 +32,6 @@ Route::post('/admin-add',[CustomAuthController::class,'AdminAdd'])->name('add-ad
 Route::get('/add-admin',[CustomAuthController::class,'addAdmin']);
 Route::post('/login-admin',[CustomAuthController::class,'loginAdmin'])->name('login-admin');
 Route::get('/admin-dashboard',[CustomAuthController::class,'AdminDashboard']);
+Route::get('students_view',[CustomAuthController::class,'ViewStudents']);
 Route::get('/admin-logout',[CustomAuthController::class,'adminLogout']);
 Route::get('/admin',[CustomAuthController::class,'AdminLogin']);

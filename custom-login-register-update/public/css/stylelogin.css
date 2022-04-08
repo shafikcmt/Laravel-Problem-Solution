@@ -15,14 +15,11 @@
 	height: 53px;
 	
 }
-.title{}
+
 .title h3 {
 	padding-top: 10px;
 }
-.right-menu{}
-.right-menu ul{}
-.right-menu ul li{
-}
+
 .navbar {
 	position: relative;
 	display: flex;
@@ -109,8 +106,3 @@
     color: #000;
     text-align: center;
 }
-.{}
-.{}
-.{}
-.{}
-.{}
