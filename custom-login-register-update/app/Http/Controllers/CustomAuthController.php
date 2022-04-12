@@ -10,6 +10,18 @@ use Session;
 class CustomAuthController extends Controller
 {
    
+    public function index(){
+        return view('index');
+    }
+   public function StudentPersonal(){
+    return view('/student_personal');
+   }
+   public function TechnicalWork(){
+    return view('/technical_work');
+   }
+   public function AssessmentWork(){
+    return view('/assessment_work');
+    }
     public function AdminLogin(){
         return view('auth.admin.admin_login');
     }
@@ -17,7 +29,9 @@ class CustomAuthController extends Controller
         return view('auth.admin.addadmin');
     }
     public function StudentDetails(){
-        return view('student_details');
+        $students = '';
+        $students = DB::table('users')->get();
+        return view('student_details',['students'=>$students]);
     }
     public function AdminDashboard(){
         $students = '';
@@ -28,9 +42,7 @@ class CustomAuthController extends Controller
     public function ViewStudents(){
         return view('/students_view');
     }
-    public function index(){
-        return view('index');
-    }
+  
     public function login(){
         return view("auth.user.login");
     }
@@ -89,8 +101,6 @@ class CustomAuthController extends Controller
      $adminresult = $adminuser->save();
      if($adminresult){
          return back()->with('success','Admin Added Successfully');
-         
-        
      }
      else{
         return back()->with('fail','something wrong');

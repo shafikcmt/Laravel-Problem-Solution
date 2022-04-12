@@ -129,3 +129,30 @@
     font-size: 34px;
     text-align: center;
 }
+/*Technical Work page */
+.work-item{
+    color: #fff;
+}
+.bg-first{
+    background: #429F9E;
+}
+.bg-second{
+    background: #F05F3B;
+}
+.bg-third{
+    background: #A5C5C3;
+}
+.bg-four{
+    background: #007872;
+}
+.work-item h4 {
+	font-size: 40px;
+	color: #fff;
+}
+.work-item a {
+	display: block;
+	text-align: center;
+	font-weight: 500;
+	text-decoration: none;
+	color: #A5FC5B;
+}

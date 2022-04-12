@@ -1,6 +1,7 @@
 @extends('layouts.master')
+
 @section('content')
-@include('includes.studentsidebar')
+@include('includes.sidebar')
 <div class="main-content p-3">
     <div class="container">
         <div class="row">
@@ -178,6 +179,6 @@
         </table>
         
 </div>
-</div>
+
 
 @stop

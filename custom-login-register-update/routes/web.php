@@ -19,15 +19,16 @@ use App\Http\Controllers\CustomAuthController;
 // });
 
 // Student Route
-Route::get('/greeting', function () {
-    return 'Hello World';
-});
+
 Route::get('/',[CustomAuthController::class,'index']);
 Route::get('/login',[CustomAuthController::class,'login'])->middleware('alreadyLogedin');
-Route::get('/',[CustomAuthController::class,'StudentDetails']);
+Route::get('/student_details',[CustomAuthController::class,'StudentDetails']);
 Route::get('/registration',[CustomAuthController::class,'registration'])->middleware('alreadyLogedin');
 Route::post('/register-user',[CustomAuthController::class,'registerUser'])->name('register-user');
 Route::post('/login-user',[CustomAuthController::class,'loginUser'])->name('login-user');
+Route::get('/student_personal',[CustomAuthController::class,'StudentPersonal']);
+Route::get('/technical-work',[CustomAuthController::class,'TechnicalWork']);
+Route::get('/assessment-work',[CustomAuthController::class,'AssessmentWork']);
 Route::get('/dashboard',[CustomAuthController::class,'dashboard'])->middleware('isLoggedIn');
 Route::get('/logout',[CustomAuthController::class,'logout']);
 

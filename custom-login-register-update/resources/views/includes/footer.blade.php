@@ -4,7 +4,7 @@
                 <div class="col-md-4">
                     <div class="footer-logo">
                         <a href="/">
-                        <img src="images/darklogo.png" alt="" class="img-responsive">
+                       <h3 class="pt-4">Geeta Technical Hub</h3>
                         </a>
                       
                     </div>

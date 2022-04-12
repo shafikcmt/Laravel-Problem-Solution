@@ -12,7 +12,7 @@
            @yield('content')
    </div>
    <footer>
-       @include('includes.adminfooter')
+       @include('includes.footer')
    </footer>
 </body>
 </html>
