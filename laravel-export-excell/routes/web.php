@@ -19,3 +19,7 @@ Route::get('/', function () {
 });
 
 Route::get('/add-employee',[EmployeeController::class,'addEmployee']);
+
+Route::get('/export-excell',[EmployeeController::class,'ExportintoExcell']);
+Route::get('/export-csv',[EmployeeController::class,'ExportintoCSV']);
+Route::get('/export-pdf',[EmployeeController::class,'ExportintoPDF']);

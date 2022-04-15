@@ -1,1 +1,5 @@
 php artisan make:model Employee -m
+php artisan make:Controller EmployeeController
+composer require maatwebsite/excel
+php artisan vendor:publish --providerr="Maatwebsite\Excel\ExcelServiceProvider"
+php artisan make:export EmployeeExport --model=App\Models\Employee

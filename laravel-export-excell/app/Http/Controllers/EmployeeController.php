@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
+use App\Exports\EmployeeExport;
+use Excel;
 use Illuminate\Support\Facades\DB;
 use App\Models\Employee;
 class EmployeeController extends Controller
@@ -18,5 +20,17 @@ class EmployeeController extends Controller
         ];
         Employee::insert($employees);
         return "Records are inserted";
+    }
+    public function ExportintoExcell()
+    {
+        return Excel::download(new EmployeeExport,'employeelist.xlsx');
+    }
+    public function ExportintoCSV()
+    {
+        return Excel::download(new EmployeeExport,'employeelist.csv');
+    }
+    public function ExportintoPDF()
+    {
+        return Excel::download(new EmployeeExport,'employeelist.pdf');
     }
 }
