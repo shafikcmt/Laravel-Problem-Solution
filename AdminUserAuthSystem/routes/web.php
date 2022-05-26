@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+// use App\Http\Controllers\Admin\Auth\AuthenticatedSessionController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -28,6 +28,6 @@ require __DIR__.'/auth.php';
 Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function(){
 Route::namespace('Auth')->group(function(){
 //Login Route
-
+Route::get('login','AuthenticatedSessionController@create')->name('login');
 });
 });
