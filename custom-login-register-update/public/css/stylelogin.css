@@ -1,0 +1,158 @@
+*{
+    padding: 0;
+    margin: 0;
+    outline: 0;
+}
+#headerpart {
+	height: 8vh;
+	background: #00293E;
+	width: 100%;
+	color: #fff;
+	line-height: 5vh;
+}
+.logo{}
+.logo img {
+	height: 53px;
+	
+}
+
+.title h3 {
+	padding-top: 10px;
+}
+
+.navbar {
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	/* padding-top: .5rem; */
+	/* padding-bottom: .5rem; */
+}
+.nav li i {
+	padding-left: 10px;
+}
+
+.nav li a {
+	text-decoration: navajowhite;
+	color: #fff;
+	font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+	
+}
+#second-header {
+	height: 12vh;
+	line-height: 84px;
+	
+}
+#contentpart {
+	height: 65vh;
+	width: 100%;
+	background: #E1E1E1;
+   
+}
+.carousel-item{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+.carousel-item img{
+   height: 65vh;
+	width: 100%;
+}
+.card-main{
+    height: 55vh;
+    background: #fff;
+}
+.form-bottom {
+	text-align: center;
+	/* text-transform: uppercase; */
+	
+	line-height: 30px;
+}
+.form-bottom a{
+	font-size: 14px;
+	font-weight: 500;
+}
+.form-bottom span{
+    display: block;
+}
+.form-bottom button {
+	width: 96px;
+	font-weight: bold;
+}
+#footerpart {
+	height: 15vh;
+	background: #00293E;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	justify-items: center;
+	/* padding-top: 29px; */
+	text-align: center;
+	align-items: center;
+}
+.footer-icon{}
+.footer-icon i {
+	height: 30px;
+	width: 30px;
+	background: #73BE1A;
+	padding-top: 6px;
+	border: 1px solid #73BE1A;
+	border-radius: 100%;
+	margin-top: 11px;
+	margin-left: 8px;
+    color: #000;
+    text-align: center;
+}
+
+/* Student Dashboard */
+.subname{
+
+}
+
+.subname h3 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.check-icon {
+    border: 3px solid #000;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+	padding-top: 5px;
+   text-align: center;
+}
+.check-icon i {
+    font-size: 34px;
+    text-align: center;
+}
+/*Technical Work page */
+.work-item{
+    color: #fff;
+}
+.bg-first{
+    background: #429F9E;
+}
+.bg-second{
+    background: #F05F3B;
+}
+.bg-third{
+    background: #A5C5C3;
+}
+.bg-four{
+    background: #007872;
+}
+.work-item h4 {
+	font-size: 40px;
+	color: #fff;
+}
+.work-item a {
+	display: block;
+	text-align: center;
+	font-weight: 500;
+	text-decoration: none;
+	color: #A5FC5B;
+}
