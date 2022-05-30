@@ -15,10 +15,13 @@ use App\Http\Controllers\PostController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-Route::get('add-author',[AuthorController::class,'addAuthor']);
+Route::get('/',[AuthorController::class,'addAuthorView']);
+Route::post('/add-author',[AuthorController::class,'addAuthor'])->name('add-author');
+Route::get('/add-post',[PostController::class,'addPostView']);
+Route::post('/add-post',[AuthorController::class,'addPostView'])->name('add-post');
 Route::get('add-post/{id}',[PostController::class,'addPost']);
 Route::get('show-post/{id}',[PostController::class,'showPost']);

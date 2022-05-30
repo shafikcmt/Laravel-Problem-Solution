@@ -7,6 +7,9 @@ use App\Models\Author;
 use App\Models\Post;
 class PostController extends Controller
 {
+    public function addPostView(){
+        return view('/add-post');
+    }
     public function addPost($id){
         $author = Author::find($id);
         $post = new Post;
