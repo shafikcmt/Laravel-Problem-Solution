@@ -8,15 +8,16 @@ use App\Models\Post;
 class PostController extends Controller
 {
     public function addPostView(){
-        return view('/add-post');
+        $authors = Author::all();
+        return view('/add-post',compact('authors'));
     }
-    public function addPost($id){
-        $author = Author::find($id);
+    public function addPost(Request $request){
+        $author = Author::find($request->author_id);
         $post = new Post;
-        $post->title = 'Title 3';
-        $post->cat = 'Cat 3';
+        $post->title = $request->title;
+        $post->cat = $request->cat;
         $author->post()->save($post);
-        return 'Post inserted';
+        return back()->with('add-post','Post added successfully !');
 
     }
 //Get Post Based on Author ID

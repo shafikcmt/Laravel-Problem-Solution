@@ -4,4 +4,9 @@ php artisan make:model User -m
 php artisan migrate
 php artisan make:middleware Authcheck
 php artisan make:middleware AlreadyLogedin
+*********************************************
+PDF Export System
+*****************
+composer require barryvdh/laravel-dompdf
+php artisan vendor:publish --provider="Barryvdh\DomPDF\ServiceProvider"
 

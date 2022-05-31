@@ -41,3 +41,9 @@ Route::get('/admin-dashboard',[CustomAuthController::class,'AdminDashboard']);
 Route::get('/students_view',[CustomAuthController::class,'ViewStudents'])->name('students_view');;
 Route::post('/admin-logout',[CustomAuthController::class,'adminLogout']);
 Route::get('/admin',[CustomAuthController::class,'AdminLogin']);
+
+
+Route::get('/export-excel',[CustomAuthController::class,'ExportintoExcell']);
+Route::get('/export-csv',[CustomAuthController::class,'ExportintoCSV']);
+Route::get('/students',[CustomAuthController::class,'getAllStudents']);
+Route::get('/export-pdf',[CustomAuthController::class,'ExportintoPDF']);

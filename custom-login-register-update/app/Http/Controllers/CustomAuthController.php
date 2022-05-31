@@ -5,7 +5,11 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Admin;
+use App\Exports\UserExport;
+use Excel;
+use PDF;
 use Hash;
+// set_time_limit(0.300);
 use Session;
 class CustomAuthController extends Controller
 {
@@ -140,6 +144,24 @@ class CustomAuthController extends Controller
             if(Session::has('ADMloginId'));
                Session::pull('ADMloginId');
                return redirect('/login-admin');
+            }
+            public function ExportintoExcell()
+            {
+                return Excel::download(new UserExport,'Studentlist.xlsx');
+            }
+            public function ExportintoCSV()
+            {
+                return Excel::download(new UserExport,'Studentlist.csv');
+            }
+            // public function getAllStudents(){
+            //     $students = User::all();
+            //     return view('/students',compact('students'));
+            // }
+            public function ExportintoPDF(){
+                $students = User::all();
+                $pdf = PDF::loadView('students',compact('students'));
+                return $pdf->download('students_list.pdf');
+                // return dd($pdf);
             }
     }
 

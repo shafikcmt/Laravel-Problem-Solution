@@ -10,25 +10,34 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                @if(session()->has('author'))
+                @if(session()->has('add-post'))
                 <div class="alert alert-success">
-                    {{session()->get('author')}}
+                    {{session()->get('add-post')}}
                 </div>
                 @endif
                 <div class="card">
                     <div class="card-header">
-                        Add Author <a href="/add-author" class="btn btn-info">Add Author</a>
+                        Add Post <a href="/" class="btn btn-info">Add Author</a>
                     </div>
                     <div class="card-body">
-                    <form action="" method="POST">
+                    <form action="{{route('add-post')}}" method="POST">
                     @csrf
-                    <div class="form-group">
-                        <label for="username">Username</label>
-                        <input type="text" class="form-control" name="username">
+                    <div class="form-group mb-3">
+                        <label for="username">Post Title</label>
+                        <input type="text" class="form-control" name="title">
                     </div>
-                    <div class="form-group mb-5">
-                        <label for="username">Password</label>
-                        <input type="password" class="form-control" name="password">
+                    <div class="form-group mb-3">
+                        <label for="username">Post Category</label>
+                        <input type="text" class="form-control" name="cat">
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="username">Author Name</label>
+                       <select class="form-control" name="author_id" id="">
+                           @foreach($authors as $author)
+                            <option value="{{$author->id}}">{{$author->username}}</option>
+                            
+                            @endforeach
+                       </select>
                     </div>
                     <div class="form-group">
                         

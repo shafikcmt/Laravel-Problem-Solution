@@ -7,11 +7,11 @@
             <div class="col-md-12">
                 <h4>Student List</h4>
                
-                <button class="btn btn-light">COPY</button>
-                <button class="btn btn-light">PDF</button>
-                <button class="btn btn-light">EXCELL</button>
-                <button class="btn btn-light">CSV</button>
-                <button class="btn btn-light">PRINT</button>
+                <a href="#"><button class="btn btn-light">COPY</button></a>
+                <a href="/export-pdf"><button class="btn btn-light">PDF</button></a>
+                <a href="export-excel"><button class="btn btn-light">EXCELL</button></a>
+                <a href="export-csv"><button class="btn btn-light">CSV</button></a>
+                <a href="#"><button class="btn btn-light">PRINT</button></a>
                 <br> <br>
                 <table class="table table-bordered table-hover table-striped">
                     @foreach($students as $stu)
