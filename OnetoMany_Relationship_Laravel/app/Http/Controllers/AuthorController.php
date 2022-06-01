@@ -24,4 +24,11 @@ class AuthorController extends Controller
     //     $author->save();
     //     return "Data Inserted";
     // }
+
+    //Get Author Based on Post ID
+
+    public function showAuthor($id){
+        $author = Post::find($id)->author;
+        return $author;
+    }
 }
