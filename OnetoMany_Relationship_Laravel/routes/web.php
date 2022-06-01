@@ -27,4 +27,4 @@ Route::post('/add-post',[PostController::class,'addPost'])->name('add-post');
 Route::get('add-post/{id}',[PostController::class,'addPost']);
 Route::get('show-post/{id}',[PostController::class,'showPost']);
 Route::get('show-author/{id}',[AuthorController::class,'showAuthor']);
-Route::get('index/{id}',[indexController::class,'index']);
+Route::get('index',[indexController::class,'index']);
