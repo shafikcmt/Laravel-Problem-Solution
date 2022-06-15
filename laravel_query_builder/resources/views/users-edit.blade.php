@@ -26,7 +26,7 @@
                         @endif
                        <form action="{{route('update-user')}}" method="POST">
                         @csrf
-                        <input type="hidden" value="{{$users->id}}">
+                        <input type="hidden" name="id" value="{{$users->id}}">
                         <div class="form-group">
                             <label for="name">Name</label>
                             <input name="name" type="text" class="form-control" value="{{$users->name}}">
@@ -35,10 +35,7 @@
                             <label  for="name">Email</label>
                             <input name="email" type="email" class="form-control" value="{{$users->email}}">
                         </div>
-                        <div class="form-group">
-                            <label  for="name">Password</label>
-                            <input name="password" type="password" class="form-control">
-                        </div>
+                       
                         <div class="form-group">
                             <input type="submit" value="Update" class="btn btn-primary">
                         </div>
