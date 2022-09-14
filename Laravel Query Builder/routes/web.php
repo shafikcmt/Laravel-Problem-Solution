@@ -13,4 +13,4 @@ use App\Http\Controllers\StudentController;
 |
 */
 
-Route::get('/show',[StudentController::class,'show']);
+Route::get('/',[StudentController::class,'show']);

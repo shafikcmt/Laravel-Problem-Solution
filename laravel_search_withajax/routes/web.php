@@ -19,3 +19,4 @@ Route::get('/', function () {
 
 Route::get('/live_search', [LiveSearch::class,'index']);
 Route::get('/live_search/action', [LiveSearch::class,'action'])->name('live_search.action');
+Route::get('/edit/{id}',[LiveSearch::class,'edit']);

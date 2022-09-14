@@ -9,13 +9,17 @@ class LiveSearch extends Controller
 {
     function index()
     {
-     return view('live_search');
+      $data = DB::table('students')
+      ->orderBy('id', 'desc')
+      ->paginate(10);
+     return view('live_search',compact('data'));
     }
 
     function action(Request $request)
     {
      if($request->ajax())
      {
+
       $output = '';
       $query = $request->get('query');
       if($query != '')
@@ -34,17 +38,25 @@ class LiveSearch extends Controller
       }
       else
       {
-       $data = DB::table('students')
-         ->orderBy('id', 'desc')
-         ->paginate(3);
+      
+        $data = DB::table('students')
+        ->orderBy('id', 'desc')
+        ->paginate(10);
+        //  return view('live_search',compact('data'))->render();
+      
+      
+
       }
       $total_row = $data->count();
       if($total_row > 0)
       {
-       foreach($data as $row)
+        
+       foreach($data as $key => $row)
        {
+        $kew=1;
         $output .= '
         <tr>
+         <td>'.$key+$data->firstItem().'</td>
          <td>'.$row->name.'</td>
          <td>'.$row->roll.'</td>
          <td>'.$row->class.'</td>
@@ -54,7 +66,7 @@ class LiveSearch extends Controller
          <td>'.$row->email.'</td>
          <td>
          <a class="btn btn-primary" href="'.$row->id.'">Edit</a>
-         <a href="'.$row->id.'">Edit</a>
+         <a class="btn btn-primary" href="edit/'.$row->id.'">Delete</a>
          </td>
         </tr>
         ';
@@ -74,7 +86,11 @@ class LiveSearch extends Controller
       );
 
       echo json_encode($data);
+
      }
+    }
+    public function edit(){
+      return view('edit');
     }
 }
 
